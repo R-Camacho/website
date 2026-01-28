@@ -1,0 +1,84 @@
+/* Style and transitions inspired by https://rexim.github.io/ 
+* (https://github.com/rexim/rexim.github.io) */
+
+body {
+    width: 480px;
+    margin: auto;
+    position: relative;
+    background: #181818;
+    color: #EEE;
+    font-family: Lucida;
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    text-align: justify;
+}
+
+.logo {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: #ffdd33;
+    top: -5px;
+    left: -60px;
+
+    transition: border-radius 0.3s;
+    border-radius: 0%;
+}
+
+.logo:hover {
+    transition: border-radius 0.3s;
+    border-radius: 50%;
+}
+
+ul {
+    margin-bottom: 35px;
+    list-style-type: none;
+}
+li::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffdd33;
+    top: 0.5rem;
+    left: -21px;
+    transition: all 0.2s;
+}
+li {
+    position: relative;
+    margin-bottom: 4px;
+}
+
+li:has(a:hover)::before,
+.logo:hover,
+body:has(.logo:hover) li::before {
+    border-radius: 50%;
+}
+
+a:link {
+    color: #EEE;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #ffdd33;
+    transition: text-decoration-color 0.2s;
+    text-underline-offset: 2px;
+}
+a:hover {
+    color: #EEE;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #EEE;
+    transition: text-decoration-color 0.2s;
+    text-underline-offset: 2px;
+}
+h1 a:link {
+    text-decoration-thickness: 4px;
+}
+
+footer {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
