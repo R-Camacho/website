@@ -53,6 +53,10 @@ li {
     margin-bottom: 4px;
 }
 
+.contributions li {
+    margin-bottom: 12px;
+}
+
 li:has(a:hover)::before,
 .logo:hover,
 body:has(.logo:hover) li::before {
